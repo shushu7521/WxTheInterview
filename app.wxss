@@ -1,0 +1,14 @@
+/**app.wxss**/
+.container {
+  margin: 2%;
+} 
+
+
+
+.input{
+  line-height: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #66ccff;
+  border-radius: 10px;
+}

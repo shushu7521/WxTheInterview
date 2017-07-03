@@ -1,0 +1,17 @@
+/* pages/detail/detail.wxss */
+
+.title{
+  font-size: 20px;
+  text-align: center;
+}
+
+.ans{
+  line-height: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.trueAns{
+  font-size: 20px;
+  font-style: bold;
+}

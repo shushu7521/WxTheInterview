@@ -1,0 +1,31 @@
+/* pages/cate/cate.wxss */
+
+
+.list{
+  /*background: red;*/
+  margin-top: 10px;
+}
+
+.listItem{
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  border-bottom: 1px solid #66ccff;
+}
+
+.listImg1{
+  height: 50px;
+  width: 40px;
+  float: left;
+}
+
+.listImg2{
+  height: 50px;
+  width: 40px;
+  float: right;
+}
+
+.listItem>text{
+  margin-left: 10px;
+  font-size: 25px;
+}

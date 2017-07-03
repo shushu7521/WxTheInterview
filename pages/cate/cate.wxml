@@ -1,0 +1,16 @@
+<!--pages/cate/cate.wxml-->
+<view class="container">
+  <input 
+    class="input"
+    type="text"
+    placeholder="请输入搜索内容"
+    confirm-type="search"
+   />
+   <view class="list">
+     <view class="listItem" wx:for="{{listData}}" bindtap="itemChose">
+      <image src="{{item.img}}" mode="aspectFit" class="listImg1"></image>
+      <text class="classname">{{item.text}}</text>
+      <image src="../../img/to.png" class="listImg2"></image>
+     </view>
+   </view>
+</view>

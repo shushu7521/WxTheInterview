@@ -1,0 +1,102 @@
+<!--pages/upload/upload.wxml-->
+<view class="container">
+    
+    <view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{cateArr}}">
+        <view class="picker">
+          类型:{{cateArr[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="tabs">
+      <text class="tab" style="background:{{tab1bg}}" bindtap="chooseTab" data-tab="danxuan">单选</text>
+      <!--<text class="tab" style="background:{{tab2bg}}">多选</text>-->
+      <text class="tab" style="background:{{tab2bg}}" bindtap="chooseTab" data-tab="jianda">简答</text>
+    </view>
+
+    <!--单选-->
+    <view style="display:{{danxuanDisplay}}">
+    
+          <input 
+              style="margin-top:10px"
+              class="input"
+              type="text"
+              placeholder="题目"
+              confirm-type="done"
+              bindblur="setTitle"
+            />
+
+            <view style="margin:5px 10px;">
+              <text>答案</text>
+            </view>
+
+
+            <view class="classname">
+            
+              <input 
+                class="input"
+                type="text"
+                placeholder="答案A"
+                confirm-type="done"
+                bindblur="setAns1"
+              />
+              <view style="height:5px;"></view>
+              <input 
+                class="input"
+                type="text"
+                placeholder="答案B"
+                confirm-type="done"
+                bindblur="setAns2"                
+              />
+              <view style="height:5px;"></view>
+              <input 
+                class="input"
+                type="text"
+                placeholder="答案C"
+                confirm-type="done"
+                bindblur="setAns3"                
+              />
+              <view style="height:5px;"></view>
+              <input 
+                class="input"
+                type="text"
+                placeholder="答案D"
+                confirm-type="done"
+                bindblur="setAns4"                
+              />
+              <view style="height:5px;"></view>
+            </view>
+
+            <view>
+              <picker bindchange="bindPickerChange" value="{{answerIndex}}" range="{{answer}}">
+                <view class="picker">
+                  正确答案:{{answer[answerIndex]}}
+                </view>
+              </picker>
+            </view>
+
+            <button class="submitButton" type="primary">确定</button>
+    
+    </view>
+
+    <!--简答-->
+    <view style="display:{{jiandaDisplay}}">
+            <input 
+              style="margin-top:10px"
+              class="input"
+              type="text"
+              placeholder="题目"
+              confirm-type="done"
+              bindblur="setTitle"
+            />
+            <textarea 
+              placeholder="答案"
+              class="textarea"
+              bindblur="setJans"              
+            />
+
+            <button class="submitButton" type="primary">确定</button>
+    </view>
+
+</view>

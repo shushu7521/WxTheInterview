@@ -1,0 +1,40 @@
+/* pages/upload/upload.wxss */
+.picker{
+  border: 1px solid #66ccff;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tabs{
+  width: 100%;
+  margin: 0 auto;
+  background: #eee;
+  height: 30px;
+  margin-top: 4px;
+}
+
+.tab{
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.submitButton{
+  width: 100%;
+  margin-top: 5px;
+}
+
+
+.textarea{
+  width: 96%;
+  margin: 5px auto;
+  border:1px solid #66ccff;
+  border-radius: 10px;
+  padding: 5px;
+}

@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/cate/cate",
+    "pages/upload/upload",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#66ccff",
+    "navigationBarTitleText": "面试宝典",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/cate/cate",
+      "text": "分类",
+      "selectedColor": "#66ccff",
+      "iconPath": "img/cate.png",
+      "selectedIconPath": "img/cate_click.png"
+    },
+    {
+      "pagePath": "pages/upload/upload",
+      "text": "上传",
+      "iconPath": "img/upload.png",
+      "selectedIconPath": "img/upload_click.png"
+    }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="title">{{title}}</view>
+  <view class="ans">A.{{ans1}}</view>
+  <view class="ans">B.{{ans2}}</view>
+  <view class="ans">C.{{ans3}}</view>
+  <view class="ans">D.{{ans4}}</view>
+  <view class="trueAns" style="display:{{showAns}}">正确答案：{{trueAns}}</view>
+
+  <view class="classname" style="position:fixed;bottom:0;width:96%;">
+    <button style="width:48%;float:left;" type="primary">显示答案</button>
+    <button style="width:48%;float:right;" type="primary">下一题</button>  
+  </view>
+
+</view>
