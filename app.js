@@ -1,5 +1,5 @@
 //app.js
-var Bmob = require('./utils/bomb/bmob');
+var Bmob = require('./utils/bmob/bmob');
 Bmob.initialize("96313347c817346d52d57ea674a1128f", "047a6a4b22ce43bd8880bcfc0817807a");
 
 App({
@@ -28,6 +28,7 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    dbMaxline:0,
   }
 })

@@ -2,9 +2,9 @@
 <view class="container">
     
     <view>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{cateArr}}">
+      <picker bindchange="bindItypeChange" value="{{index}}" range="{{cateArr}}">
         <view class="picker">
-          类型:{{cateArr[index]}}
+          请选择类型:{{cateArr[index]}}
         </view>
       </picker>
     </view>
@@ -71,12 +71,12 @@
             <view>
               <picker bindchange="bindPickerChange" value="{{answerIndex}}" range="{{answer}}">
                 <view class="picker">
-                  正确答案:{{answer[answerIndex]}}
+                  请选择正确答案:{{answer[answerIndex]}}
                 </view>
               </picker>
             </view>
 
-            <button class="submitButton" type="primary">确定</button>
+            <button class="submitButton" type="primary" bindtap="uploadDanxuan">确定</button>
     
     </view>
 
@@ -88,15 +88,16 @@
               type="text"
               placeholder="题目"
               confirm-type="done"
-              bindblur="setTitle"
+              bindblur="setJTitle"
             />
+            <!--api有bug，textarea暂时不用bindblur-->
             <textarea 
               placeholder="答案"
               class="textarea"
-              bindblur="setJans"              
+              bindinput="setJans"              
             />
 
-            <button class="submitButton" type="primary">确定</button>
+            <button class="submitButton" type="primary" bindtap="uploadJianda">确定</button>
     </view>
 
 </view>
