@@ -1,9 +1,9 @@
 /* pages/upload/upload.wxss */
 .picker{
-  border: 1px solid #66ccff;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 10px;
+  border: 1rpx solid #66ccff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 20rpx;
   text-align: center;
 }
 
@@ -11,14 +11,14 @@
   width: 100%;
   margin: 0 auto;
   background: #eee;
-  height: 30px;
-  margin-top: 4px;
+  height: 60rpx;
+  margin-top: 8rpx;
 }
 
 .tab{
   width: 50%;
-  height: 30px;
-  line-height: 30px;
+  height: 60rpx;
+  line-height: 60rpx;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
@@ -27,14 +27,16 @@
 
 .submitButton{
   width: 100%;
-  margin-top: 5px;
+  margin-top: 10rpx;
+  background: #66ccff;
+  color: white;
 }
 
 
 .textarea{
   width: 96%;
-  margin: 5px auto;
-  border:1px solid #66ccff;
-  border-radius: 10px;
-  padding: 5px;
+  margin: 10rpx auto;
+  border:1rpx solid #66ccff;
+  border-radius: 20rpx;
+  padding: 10rpx;
 }

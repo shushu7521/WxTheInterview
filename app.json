@@ -2,12 +2,13 @@
   "pages":[
     "pages/cate/cate",
     "pages/upload/upload",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/feedback/feedback"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#66ccff",
-    "navigationBarTitleText": "面试宝典",
+    "navigationBarTitleText": "web前端面试宝典",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -24,6 +25,12 @@
       "text": "上传",
       "iconPath": "img/upload.png",
       "selectedIconPath": "img/upload_click.png"
+    },
+    {
+      "pagePath": "pages/feedback/feedback",
+      "text": "反馈",
+      "iconPath": "img/feedback.png",
+      "selectedIconPath": "img/feedback_click.png"
     }
     ]
   }

@@ -1,15 +1,24 @@
 <!--pages/detail/detail.wxml-->
-<view class="container">
+<view class="container" style="display:{{showNone?'none':'block'}}">
   <view class="title">{{title}}</view>
-  <view class="ans">A.{{ans1}}</view>
-  <view class="ans">B.{{ans2}}</view>
-  <view class="ans">C.{{ans3}}</view>
-  <view class="ans">D.{{ans4}}</view>
-  <view class="trueAns" style="display:{{showAns}}">正确答案：{{trueAns}}</view>
 
+
+  <view style="display:{{type=='danxuan'?'block':'none'}}">
+    <view class="ans">{{ans1}}</view>
+    <view class="ans">{{ans2}}</view>
+    <view class="ans">{{ans3}}</view>
+    <view class="ans">{{ans4}}</view>
+  </view>
+  <!--  -->
+  <scroll-view scroll-y>
+    <view class="trueAns" style="display:{{showAns}}">正确答案：{{trueAns}}</view>
+  </scroll-view>
+  <!--底部  -->
   <view class="classname" style="position:fixed;bottom:0;width:96%;">
-    <button style="width:48%;float:left;" type="primary">显示答案</button>
-    <button style="width:48%;float:right;" type="primary">下一题</button>  
+    <button style="width:48%;float:left;" type="primary" bindtap="showTrueAnswer">{{showBtnText}}</button>
+    <button style="width:48%;float:right;" type="primary" bindtap="showNext">下一题</button>
   </view>
 
 </view>
+
+<view class="whennone" style="display:{{showNone?'block':'none'}}">暂时没有面试题哦</view>

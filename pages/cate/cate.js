@@ -14,7 +14,7 @@ Page({
       },
       {
         img: "../../img/cate/css3.png",
-        text: "css3"
+        text: "css"
       },
       {
         img: "../../img/cate/js.png",
@@ -42,7 +42,7 @@ Page({
       },
       {
         img: "../../img/cate/nodejs.png",
-        text: "nodeJs"
+        text: "nodeJS"
       },
       {
         img: "../../img/cate/other.png",
@@ -53,30 +53,33 @@ Page({
   },
   
   //列表点击事件
-  itemChose:function(){
-    wx.showActionSheet({
-      itemList: [
-        '顺序查看',
-        '随机查看'
-      ],
-      success: function (res) {
+  itemChose:function(e){
 
-        switch(res.tapIndex){
-          case 0:
-          case 1:
-            wx.navigateTo({
-              url: '../detail/detail?index='+res.tapIndex,
-              success: function (res) { console.log(res) },
-              fail: function (res) { console.log(res) },
-              complete: function (res) { console.log(res) },
-            })
-          break;
-        }       
-      },
-      fail:function(res){
-
-      }
+    wx.navigateTo({
+      url: '../detail/detail?Itype=' + e.currentTarget.dataset.itype,
+      success: function (result) { console.log(result.tapIndex) },
+      fail: function (result) { console.log(result) },
+      complete: function (result) { console.log(result) },
     })
+    
+    // wx.showActionSheet({
+    //   itemList: [
+    //     '顺序查看',
+    //     '随机查看'
+    //   ],
+    //   success: function (res) {
+
+    //     switch(res.tapIndex){
+    //       case 0:
+    //       case 1:
+            
+    //       break;
+    //     }       
+    //   },
+    //   fail:function(res){
+
+    //   }
+    // })
 
   },
 
@@ -84,7 +87,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    app.getUserInfo();
   },
 
   /**

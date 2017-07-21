@@ -1,17 +1,30 @@
 /* pages/detail/detail.wxss */
 
 .title{
-  font-size: 20px;
+  font-size: 40rpx;
   text-align: center;
+  font-weight: bold;
 }
 
 .ans{
-  line-height: 30px;
-  height: 30px;
+  line-height: 50rpx;
+  height: 50rpx;
   vertical-align: middle;
 }
 
 .trueAns{
-  font-size: 20px;
-  font-style: bold;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  color: #e4393c;
+}
+
+.whennone{
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 50rpx;
+  color: #e4393c;
+  text-align: center;
+  position: fixed;
+  top: 300rpx;
 }

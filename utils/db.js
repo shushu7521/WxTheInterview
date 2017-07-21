@@ -38,7 +38,8 @@ function getMaxLine(Itype){
   itype.find({
     success: function (results) {
       console.log(results.length);
-      wx.setStorageSync("dbMaxline", results.length);//同步保存给本地
+      wx.setStorage("dbMaxline", results.length);//同步保存给本地
+      return results.length;
     },
     error: function (error) {
       console.log(error);
@@ -50,7 +51,8 @@ function getMaxLine(Itype){
  * 生成不大于maxlen的随机数
  */
 function randomNum(){
-  var maxlen = wx.getStorageSync("dbMaxline");
+  var maxlen = wx.getStorage("dbMaxline");
+  console.log(maxlen);
   return parseInt( Math.random()*maxlen);
 }
 

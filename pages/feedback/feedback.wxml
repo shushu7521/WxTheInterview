@@ -1,0 +1,6 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="body">
+  <textarea   placeholder="您的意见" value="{{fbMsg}}" bindblur="setdata" data-tp="fd"/>
+  <input placeholder="您的联系方式" value="{{connect}}" bindblur="setdata" data-tp="cnn"/>
+  <button bindtap="sendFd">提交</button>
+</view>

@@ -1,0 +1,17 @@
+/* pages/feedback/feedback.wxss */
+.body{
+  padding: 20rpx;
+}
+
+.body>textarea,.body>input{
+  width: 690rpx;
+  margin: 10rpx 0;
+  padding: 10rpx;
+  border: 1px solid #66ccff;
+  border-radius: 5rpx;
+}
+
+button{
+  background: #66ccff;
+  color: white;
+}

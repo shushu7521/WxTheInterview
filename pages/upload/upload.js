@@ -1,6 +1,7 @@
 // pages/upload/upload.js
 
 var db = require('../../utils/db.js');
+var util = require('../../utils/util.js');
 
 Page({
 
@@ -134,11 +135,17 @@ Page({
         ans3:this.data.ans3,
         ans4:this.data.ans4
       };
+
+      var data = {
+        title:this.data.title,
+        ans1: this.data.ans1,
+        ans2: this.data.ans2,
+        ans3: this.data.ans3,
+        ans4:this.data.ans4,
+      }
+      if(!util.isEmpty(data)) return;
+
       inter.trueAnswer = this.data.answer[this.data.answerIndex];
-
-      // console.log(inter);
-      // console.log(JSON.stringify(inter.answer));
-
       db.insert(inter.Itype,
                 inter.type,
                 inter.title,
@@ -150,6 +157,14 @@ Page({
         title: '上传成功，等待审核',
       })
 
+      //清空
+      this.setData({
+        title: "",
+        ans1: "",
+        ans2: "",
+        ans3: "",
+        ans4: ""
+      })
 
   },
 
@@ -163,6 +178,11 @@ Page({
     inter.trueAnswer = this.data.Jans;
 
     // console.log(inter);
+    var data = {
+      JTitle: this.data.JTitle,
+      Jans: this.data.Jans
+    }
+    if (!util.isEmpty(data)) return;
 
     db.insert(inter.Itype,
       inter.type,
@@ -174,74 +194,13 @@ Page({
     wx.showToast({
       title: '上传成功，等待审核',
     })
-  },
 
-  clear:function(){
-
+    
     this.setData({
-      title: "",
-      ans1: "",
-      ans2: "",
-      ans3: "",
-      ans4: ""
+      Jtitle:"",
+      Jans:""
     })
-
+    
   },
 
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })
